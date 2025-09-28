@@ -52,8 +52,46 @@ The code now properly handles:
 - Both GUI and command-line interfaces
 - Proper normalization to prevent audio clipping
 - Frequency filtering for true green noise characteristics
+Key fixes and improvements:
+
+1. **Fixed the filedialog error**:
+   - Changed `tkinter.filedialog` to `filedialog` (imported directly)
+   - This resolves the "module tkinter has no attribute 'filedialog'" error
+
+2. **Added graph display functionality**:
+   - Added a "Show Graphs" button
+   - Created a separate window for displaying plots
+   - Shows both raw data plot and histogram
+   - Uses matplotlib with Tkinter integration via FigureCanvasTkAgg
+   - Handles empty data gracefully
+
+3. **Additional improvements**:
+   - Proper GUI layout with scrollable data display
+   - Status updates during recording
+   - Better file saving with error handling
+   - Data is displayed in a treeview for easy viewing
+   - Graph window can be brought to front if already exists
+   - Simulated data collection (replace with actual sensor reading)
+
+4. **Dependencies**:
+   Make sure you have these packages installed:
+   ```
+   pip install matplotlib numpy
+   ```
+
+The application now:
+- Records simulated data every second
+- Displays data in a scrollable table
+- Saves data to CSV files using the correct file dialog
+- Shows both raw data and distribution graphs in a separate window
+- Handles errors gracefully
+
+To use with real sensors, replace the `record_data()` method with actual sensor reading code.
 
 To use the application:
 1. **GUI Mode**: Run with `python green_noise_generator.py --gui`
 2. **Command Line**: Use various options like `--duration`, `--sample-rate`, `--play`, `--save`, etc.
+
+
+
 
