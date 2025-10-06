@@ -1,0 +1,5 @@
+numpy>=1.26.0
+sounddevice>=0.4.6
+scipy>=1.10.0
+matplotlib>=3.7.0
+pyaudio>=0.2.11
