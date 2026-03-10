@@ -30,8 +30,8 @@ python3 green_noise_enhanced_v3.py --theme ocean
 ```
 
 ## Implementation Notes
-- Theme definitions live in `DataLoggerGUI.themes`.
-- `apply_theme()` updates Tk widget styling recursively.
+- Theme definitions live in `src/green_noise/themes.py` (`THEMES`).
+- GUI theming is applied in `src/green_noise/gui.py` (`apply_theme()`).
 - Plot colors are synchronized through `_apply_theme_to_plots()`.
 - Waveform and spectrum line colors are theme-specific.
 
@@ -41,6 +41,6 @@ To add a new theme, copy an existing entry and provide values for:
 - `text`, `muted_text`
 - `button_bg`, `button_fg`
 - `entry_bg`, `entry_fg`
-- `accent`, `danger`, `status_fg`
+- `accent`, `danger`, `status_info`, `status_warning`, `status_error`
 - `plot_bg`, `axes_bg`, `grid`
 - `waveform_line`, `spectrum_line`

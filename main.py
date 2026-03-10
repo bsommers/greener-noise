@@ -1,5 +1,3 @@
-"""Compatibility launcher for the modular green-noise application."""
-
 from pathlib import Path
 import sys
 

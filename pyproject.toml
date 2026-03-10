@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "green-noise"
+version = "0.2.0"
+description = "Green noise generator with GUI, CLI, theming, and plotting"
+readme = "README.md"
+requires-python = ">=3.12"
+authors = [{ name = "Green Noise Contributors" }]
+dependencies = [
+  "numpy>=1.26.0",
+  "scipy>=1.10.0",
+  "matplotlib>=3.7.0",
+  "pyaudio>=0.2.11",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0.0",
+  "ruff>=0.6.0",
+  "mypy>=1.11.0",
+]
+
+[project.scripts]
+green-noise = "green_noise.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+include = ["main.py", "green_noise_enhanced_v3.py", "src/**/*.py", "tests/**/*.py"]
+
+[tool.black]
+line-length = 100
+target-version = ["py312"]
