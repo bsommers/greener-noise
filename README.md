@@ -81,3 +81,4 @@ ruff format --check .
 - [Code Improvement Plan](docs/CODE_IMPROVEMENT_PLAN.md)
 - [UI Improvement Plan](docs/UI_IMPROVEMENT_PLAN.md)
 - [Theming Guide](docs/THEMING.md)
+- [Screenshots](docs/SCREENSHOTS.md)
